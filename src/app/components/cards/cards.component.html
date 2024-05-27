@@ -1,0 +1,132 @@
+<div id="carouselExampleFade" class="carousel slide carousel-fade d-none d-sm-block">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+            <div class="col-4" *ngFor="let item of payloadTres">
+              <div class="card">
+                  <div class="card-body">
+                      <form>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="formOptions" id="option1" value="1">
+                              <label class="form-check-label" for="option1">
+                              </label>
+                          </div>
+                      </form>
+                      <div class="container">
+                          <div class="row">
+                              <div class="mt-2 col-12">
+                                  <div>
+                                      <span class="text-titulo">{{item.nameProduct}}</span><br>
+                                      <span class="text-subtitulo">#{{item.numberProduct}}</span>
+                                  </div>
+                                  <hr class="mt-3" style="border: 1px solid #C4C7C4; opacity: 1;">
+                                  <div>
+                                      <span class="text-titulo">Ya cuentas con:</span><br>
+                                      <span class="text-number">{{item.balanceProduct | amountPipe}}</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row mt-5">
+                          <div class="col-12 d-flex">
+                              <div class="container-text">
+                                  <img src="./assets/icons/happy.svg" alt="">
+                                  <span class="description">¡Cuentas con <a class="texto-description" style="color: #FE9200;">$2.120.000</a> para tu objetivo! <br> Te recomendamos aportar <a class="texto-description" style="color: #3F3F3F;">$388.000 mensuales</a> para lograrlo en <a class="texto-description" style="color: #3F3F3F;">diciembre del 2022.</a></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+            <div class="col-4">
+                <div class="card card-custom" style="background-image: url('./assets/img/carta.png');">
+                    <div class="card-body">
+                      <button class="boton boton-text" (click)="verBanner()">
+                        Explora Ahora
+                      </button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div id="carouselsm" class="carousel slide carousel-fade d-block d-sm-none">
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let item of payloadCards?.listCard; let isFirst = first" [ngClass]="{'active': isFirst}">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-body">
+                      <form>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="formOptions" id="option1" value="1">
+                              <label class="form-check-label" for="option1">
+                              </label>
+                          </div>
+                      </form>
+                      <div class="container">
+                          <div class="row">
+                              <div class="mt-2 col-12">
+                                  <div>
+                                      <span class="text-titulo">{{item.nameProduct}}</span><br>
+                                      <span class="text-subtitulo">#{{item.numberProduct}}</span>
+                                  </div>
+                                  <hr class="mt-3" style="border: 1px solid #C4C7C4; opacity: 1;">
+                                  <div>
+                                      <span class="text-titulo">Ya cuentas con:</span><br>
+                                      <span class="text-number">$6.000.000</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row mt-5">
+                          <div class="col-12 d-flex">
+                              <div class="container-text">
+                                  <img src="./assets/icons/happy.svg" alt="">
+                                  <span class="description">¡Cuentas con <a class="texto-description" style="color: #FE9200;">$2.120.000</a> para tu objetivo! <br> Te recomendamos aportar <a class="texto-description" style="color: #3F3F3F;">$388.000 mensuales</a> para lograrlo en <a class="texto-description" style="color: #3F3F3F;">diciembre del 2022.</a></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-custom" style="background-image: url('./assets/img/carta.png');">
+                    <div class="card-body">
+                      <button class="boton boton-text" (click)="verBanner()">
+                        Explora Ahora
+                      </button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselsm" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselsm" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
